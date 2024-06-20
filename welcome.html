@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='atm.jpg') }}');
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='TUNISYS_LOGO_001.png') }}" alt="Logo" class="logo">
+        <h1>Data Visualization Dashboard</h1>
+    </header>
+    <main>
+        <h2>Register <a href="{{ url_for('register') }}">here</a></h2>
+        <h2>Log in <a href="{{ url_for('login') }}">here</a></h2>
+    </main>
+</body>
+</html>
